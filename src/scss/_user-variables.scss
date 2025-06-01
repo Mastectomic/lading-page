@@ -1,15 +1,17 @@
 //
 // user-variables.scss
-// Use this to override Bootstrap and Silicon variables
+// Use this to override Bootstrap and Mastectomic variables
 //
 
-// Example of a variable override to change Silicon background color
+// Example of a variable override to change Mastectomic background color
 // Remove the "//" to comment it in and see it in action!
 // $body-bg: #f3f6ff;
+$body-color: #3c3c3b !default;
 
 // Font override: Change from Manrope to Montserrat
 // Override Google Fonts import URL for Montserrat with matching weights
 $path-to-fonts: "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" !default;
+$headings-color: #3c3c3b !default;
 
 // Override font family to use Montserrat
 $font-family-sans-serif: "Montserrat", sans-serif !default;
