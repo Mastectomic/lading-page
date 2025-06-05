@@ -308,7 +308,10 @@
         <div class="container pt-3 pt-sm-4 pt-xl-5">
           <div class="row pt-md-2 pt-lg-5">
             <div class="col-md-5 d-flex flex-column mt-md-4 pt-5 pb-3 pb-sm-4 py-md-5">
-              <h1 class="display-5 text-center text-md-start mb-4">Mastectomic<br><span style="color:#cf4491">personalized  daily care and support </span>after mastectomy</h1>
+              <h1 class="display-6 fw-light text-center text-md-start mb-4" style="color: #444;">
+                Mastectomic<br>
+                <span class="fw-semibold" style="color:#cf4491">personalized daily care and support </span>after mastectomy
+              </h1>
               <p class="fs-lg text-center text-md-start pb-2 pb-md-3 mb-4 mb-lg-5">A mobile application supporting post-mastectomy rehabilitation, offering personalized exercise plans, educational video materials, and progress tracking – all in one place!</p>
               <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start">
                 <a href="#" class="btn btn-dark btn-lg px-3 py-2 me-sm-3 me-lg-4 mb-3">
@@ -340,82 +343,81 @@
 
 
       <!-- Brands (carousel on screens < 1100px) -->
-      <section class="container py-5 mt-md-2 mt-lg-4">
-        <div class="swiper pt-2 mx-n2" data-swiper-options='{
-          "slidesPerView": 2,
-          "pagination": {
-            "el": ".swiper-pagination",
-            "clickable": true
-          },
-          "breakpoints": {
-            "500": {
-              "slidesPerView": 3,
-              "spaceBetween": 8
-            },
-            "650": {
-              "slidesPerView": 4,
-              "spaceBetween": 8
-            },
-            "900": {
-              "slidesPerView": 5,
-              "spaceBetween": 8
-            },
-            "1100": {
-              "slidesPerView": 6,
-              "spaceBetween": 8
-            }
-          }
-        }'>
-          <div class="swiper-wrapper">
+      <!-- Sekcja Brands została całkowicie usunięta na życzenie użytkownika. -->
 
-            <!-- Item -->
-            <div class="swiper-slide py-3">
-              <a href="#" class="card card-body card-hover px-2 mx-2">
-                <img src="assets/img/brands/01.svg" class="d-block mx-auto my-2" width="154" alt="Brand">
-              </a>
-            </div>
 
-            <!-- Item -->
-            <div class="swiper-slide py-3">
-              <a href="#" class="card card-body card-hover px-2 mx-2">
-                <img src="assets/img/brands/02.svg" class="d-block mx-auto my-2" width="154" alt="Brand">
-              </a>
-            </div>
-
-            <!-- Item -->
-            <div class="swiper-slide py-3">
-              <a href="#" class="card card-body card-hover px-2 mx-2">
-                <img src="assets/img/brands/03.svg" class="d-block mx-auto my-2" width="154" alt="Brand">
-              </a>
-            </div>
-
-            <!-- Item -->
-            <div class="swiper-slide py-3">
-              <a href="#" class="card card-body card-hover px-2 mx-2">
-                <img src="assets/img/brands/04.svg" class="d-block mx-auto my-2" width="154" alt="Brand">
-              </a>
-            </div>
-
-            <!-- Item -->
-            <div class="swiper-slide py-3">
-              <a href="#" class="card card-body card-hover px-2 mx-2">
-                <img src="assets/img/brands/05.svg" class="d-block mx-auto my-2" width="154" alt="Brand">
-              </a>
-            </div>
-
-            <!-- Item -->
-            <div class="swiper-slide py-3">
-              <a href="#" class="card card-body card-hover px-2 mx-2">
-                <img src="assets/img/brands/06.svg" class="d-block mx-auto my-2" width="154" alt="Brand">
-              </a>
+      <!-- How it works (Slider) from v2 -->
+      <section class="container mb-5 mb-lg-6">
+        <div class="text-center pb-5 mb-4 pt-5 pt-md-6 mx-auto" style="max-width: 630px;">
+          <h2 class="h1">We support rehabilitation after mastectomy</h2>
+          <p class="mb-0">We are with you when post-surgery rehabilitation becomes a challengeMastectomic offers support every step of the way – safe exercises, motivation, and care all in one place</p>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-md-6 pb-4 pb-md-0 mb-2 mb-md-0">
+            <!-- Swiper tabs -->
+            <div class="position-relative px-5">
+              <div class="swiper-tabs zindex-2 mx-auto" style="max-width: 384px;">
+                <div id="screen-1" class="swiper-tab active">
+                  <img src="assets/img/landing/app-showcase-2/screens/01.png" alt="App screen">
+                </div>
+                <div id="screen-2" class="swiper-tab">
+                  <img src="assets/img/landing/app-showcase-2/screens/02.png" alt="App screen">
+                </div>
+                <div id="screen-3" class="swiper-tab">
+                  <img src="assets/img/landing/app-showcase-2/screens/03.png" alt="App screen">
+                </div>
+              </div>
+              <div class="bg-gradient-primary position-absolute start-0 bottom-0 w-100 opacity-15 rounded-3" style="height: 86.5%;"></div>
             </div>
           </div>
-
-          <!-- Pagination (bullets) -->
-          <div class="swiper-pagination position-relative pt-2 mt-4"></div>
+          <div class="col-md-6 col-lg-5 offset-lg-1">
+            <div class="ps-md-4 ps-lg-0">
+              <!-- Swiper slider -->
+              <div class="swiper text-center text-md-start mt-auto" data-swiper-options='{"spaceBetween": 30, "loop": true, "tabs": true, "navigation": {"prevEl": "#prev-screen", "nextEl": "#next-screen"}}'>
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide" data-swiper-tab="#screen-1">
+                 
+                    <h3 class="mb-lg-4">Having trouble accessing rehabilitation?</h3>
+                    <p>Mastectomic pozwala Ci ćwiczyć w domu - bez stresu, bez kolejek i bez konieczności dojazdów</p>
+                  </div>
+                  <div class="swiper-slide" data-swiper-tab="#screen-2">
+                
+                    <h3 class="mb-lg-4">Is it hard for you to stay consistent with your exercises?</h3>
+                    <p>With motivational content and progress tracking, we'll help you build the habit of daily rehabilitation.</p>
+                  </div>
+                  <div class="swiper-slide" data-swiper-tab="#screen-3">
+                  
+                    <h3 class="mb-lg-4">Are you worried you're doing the exercises incorrectly?</h3>
+                    <p>Our instructions and personalized movement correction ensure your exercises are safe and effective.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Slider controls (Prev / next) -->
+              <div class="d-flex justify-content-center justify-content-md-start pt-2 pt-lg-3">
+                <button type="button" id="prev-screen" class="btn btn-prev btn-icon btn-sm me-2" aria-label="Previous">
+                  <i class="bx bx-chevron-left"></i>
+                </button>
+                <button type="button" id="next-screen" class="btn btn-next btn-icon btn-sm ms-2" aria-label="Next">
+                  <i class="bx bx-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
+      <!-- Video popup section (dokładnie jak w demo) -->
+      <section class="container py-5 mb-5 mb-lg-6">
+        <div class="position-relative bg-size-cover bg-position-center rounded-3 overflow-hidden" style="background-image: url(assets/img/landing/software-agency-1/case-study01.jpg); min-height: 400px;">
+          <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-60"></span>
+          <div class="position-relative text-center zindex-5 px-3 py-4 py-sm-5 my-lg-5">
+            <a href="https://www.youtube.com/watch?v=vTgKtoU--Z8" class="btn btn-video btn-icon bg-white btn-xl mb-2" data-bs-toggle="video" aria-label="Play video">
+              <i class="bx bx-play"></i>
+            </a>
+            <div class="fs-sm text-white opacity-75">Click me to watch video!</div>
+          </div>
+        </div>
+      </section>
 
       <!-- Features -->
       <section id="features" class="container pt-lg-2 pt-xl-3 pb-3 pb-xl-5 mt-n2 mt-sm-0 mb-2 mb-md-4 mb-lg-5">
@@ -517,110 +519,6 @@
             </div>
           </div>
         </div>
-      </section>
-
-
-      <!-- How it works (Slider) -->
-      <section class="position-relative bg-secondary py-5">
-        <div class="container mt-3 pt-md-2 pt-lg-4 pb-2 pb-md-4 pb-lg-5">
-          <h2 class="h1 text-center pb-2 pb-md-0 mb-4 mb-md-5">How Does It Work?</h2>
-          <div class="position-relative mx-5">
-
-            <!-- Slider prev/next buttons -->
-            <button type="button" id="prev-screen" class="btn btn-prev btn-icon position-absolute top-50 start-0 ms-n5 translate-middle-y" aria-label="Previous">
-              <i class="bx bx-chevron-left"></i>
-            </button>
-            <button type="button" id="next-screen" class="btn btn-next btn-icon position-absolute top-50 end-0 me-n5 translate-middle-y" aria-label="Next">
-              <i class="bx bx-chevron-right"></i>
-            </button>
-
-            <!-- Phone frame -->
-            <div class="position-absolute top-0 start-50 translate-middle-x h-100 w-100 w-md-33 zindex-5">
-              <div class="d-flex bg-repeat-0 bg-size-cover w-100 h-100 mx-auto" style="max-width: 328px; background-image: url(assets/img/landing/app-showcase-1/screens/phone-frame.png);"></div>
-            </div>
-
-            <!-- Phone screen -->
-            <div class="position-absolute top-0 start-50 translate-middle-x h-100 w-100 w-md-33">
-              <div class="d-flex bg-repeat-0 bg-size-cover w-100 h-100 mx-auto" style="max-width: 328px; background-image: url(assets/img/landing/app-showcase-1/screens/phone-screen.png);"></div>
-            </div>
-
-            <!-- Swiper slider -->
-            <div class="swiper mobile-app-slider" data-swiper-options='{
-              "slidesPerView": 1,
-              "centeredSlides": true,
-              "loop": true,
-              "tabs": true,
-              "pagination": {
-                "el": "#swiper-progress",
-                "type": "progressbar"
-              },
-              "navigation": {
-                "prevEl": "#prev-screen",
-                "nextEl": "#next-screen"
-              },
-              "breakpoints": {
-                "768": { "slidesPerView": 3 }
-              }
-            }'>
-              <div class="swiper-wrapper">
-
-                <!-- Item -->
-                <div class="swiper-slide" data-swiper-tab="#text-1">
-                  <img src="assets/img/landing/app-showcase-1/screens/01.png" class="d-block mx-auto" width="328" alt="Screen">
-                </div>
-
-                <!-- Item -->
-                <div class="swiper-slide" data-swiper-tab="#text-2">
-                  <img src="assets/img/landing/app-showcase-1/screens/02.png" class="d-block mx-auto" width="328" alt="Screen">
-                </div>
-
-                <!-- Item -->
-                <div class="swiper-slide" data-swiper-tab="#text-3">
-                  <img src="assets/img/landing/app-showcase-1/screens/03.png" class="d-block mx-auto" width="328" alt="Screen">
-                </div>
-
-                <!-- Item -->
-                <div class="swiper-slide" data-swiper-tab="#text-4">
-                  <img src="assets/img/landing/app-showcase-1/screens/04.png" class="d-block mx-auto" width="328" alt="Screen">
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-          <!-- Swiper tabs (Description text) -->
-          <div class="row justify-content-center pt-4 mt-2 mt-md-3">
-            <div class="swiper-tabs col-xl-6 col-lg-7 col-md-8 text-center">
-
-              <!-- Text 1 -->
-              <div id="text-1" class="swiper-tab active">
-                <h3 class="h4 pb-1 mb-2">Step 1. Advanced budget management</h3>
-                <p class="mb-0">Consequat ut cras nisl, enim purus in facilisi. Ipsum amet, lectus malesuada risus sollicitudin accumsan. Id sem elit vel vel lectus risus senectus.</p>
-              </div>
-
-              <!-- Text 2 -->
-              <div id="text-2" class="swiper-tab">
-                <h3 class="h4 pb-1 mb-2">Step 2. Latest transaction history</h3>
-                <p class="mb-0">Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. Arcu sociis tristique quisque hac in consectetur condimentum.</p>
-              </div>
-
-              <!-- Text 3 -->
-              <div id="text-3" class="swiper-tab">
-                <h3 class="h4 pb-1 mb-2">Step 3. Transfers to people from your contact list</h3>
-                <p class="mb-0">Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</p>
-              </div>
-
-              <!-- Text 4 -->
-              <div id="text-4" class="swiper-tab">
-                <h3 class="h4 pb-1 mb-2">Step 4. Card-to-card transfers</h3>
-                <p class="mb-0">A sed lorem felis, pulvinar pharetra. At tempus, vel sed faucibus amet sit elementum sed erat. Id nunc blandit pharetra facilisis.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slider progress -->
-        <div id="swiper-progress" class="swiper-pagination bottom-0" style="top: auto;"></div>
       </section>
 
 
