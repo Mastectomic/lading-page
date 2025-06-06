@@ -1,6 +1,6 @@
 
   /*!
-   * Silicon | Multipurpose Bootstrap Template & UI Kit
+   * Mastectomic | Multipurpose Bootstrap Template & UI Kit
    * Copyright 2025 Createx Studio
    * Theme scripts
    *
