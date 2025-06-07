@@ -439,7 +439,7 @@
       <section id="about" class="container mb-5 mb-lg-6">
         <div class="text-center pb-5 mb-4 pt-5 pt-md-6 mx-auto" style="max-width: 630px;">
           <h2 class="h1">We support rehabilitation after mastectomy</h2>
-          <p class="mb-0">We’re here for you
+          <p class="mb-0">We're here for you
             when post-surgery rehabilitation
             becomes a challenge. MasteCare
             oﬀers support every step of the way
@@ -933,12 +933,27 @@
             </div>
             <div class="col-xl-5 col-md-6">
               <div class="ps-lg-5 ms-xl-2">
-                <form class="input-group input-group-lg needs-validation" novalidate>
-                  <input type="email" id="subscr-email" class="form-control rounded-start ps-5" placeholder="Your email" required>
+                <!-- Web3Forms Integration -->
+                <form action="https://api.web3forms.com/submit" method="POST" class="input-group input-group-lg" id="newsletter-form">
+                  <!-- Web3Forms Access Key -->
+                  <input type="hidden" name="access_key" value="ec474349-17af-46da-8716-184fd88c2c0a">
+                  <input type="hidden" name="subject" value="New Newsletter Subscription - MasteCare">
+                  <input type="hidden" name="from_name" value="MasteCare Newsletter">
+                  
+                  <input type="email" name="email" id="subscr-email" class="form-control rounded-start ps-5" placeholder="Your email" required>
                   <i class="bx bx-envelope fs-xl text-muted position-absolute top-50 start-0 translate-middle-y ms-3 zindex-5"></i>
-                  <div class="invalid-tooltip position-absolute top-100 start-0">Please provide a valid email address.</div>
-                  <button type="submit" class="btn btn-primary px-sm-4">Subscribe</button>
+                  
+                  <button type="submit" class="btn btn-primary px-sm-4">
+                    <span class="btn-text">Subscribe</span>
+                    <span class="btn-loading d-none">
+                      <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                      Subscribing...
+                    </span>
+                  </button>
                 </form>
+                
+                <!-- Success/Error Messages -->
+                <div id="form-message" class="mt-3" style="display: none;"></div>
               </div>
             </div>
           </div>
@@ -1013,5 +1028,50 @@
 
     <!-- Main Theme Script -->
     <script src="assets/js/theme.min.js"></script>
+
+    <!-- Newsletter Form Handler -->
+    <script>
+      document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          const form = e.target;
+          const formData = new FormData(form);
+          const messageDiv = document.getElementById('form-message');
+          const submitBtn = form.querySelector('button[type="submit"]');
+          const btnText = submitBtn.querySelector('.btn-text');
+          const btnLoading = submitBtn.querySelector('.btn-loading');
+          
+          // Show loading state
+          btnText.classList.add('d-none');
+          btnLoading.classList.remove('d-none');
+          submitBtn.disabled = true;
+          messageDiv.style.display = 'none';
+          
+          fetch('https://api.web3forms.com/submit', {
+              method: 'POST',
+              body: formData
+          })
+          .then(response => response.json())
+          .then(data => {
+              if (data.success) {
+                  messageDiv.innerHTML = '<div class="alert alert-success alert-dismissible fade show" role="alert"><i class="bx bx-check-circle me-2"></i>Thank you! You\'ve been successfully subscribed to our newsletter.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+                  form.reset();
+              } else {
+                  messageDiv.innerHTML = '<div class="alert alert-warning alert-dismissible fade show" role="alert"><i class="bx bx-error me-2"></i>Something went wrong. Please try again or contact support.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+              }
+              messageDiv.style.display = 'block';
+          })
+          .catch(error => {
+              messageDiv.innerHTML = '<div class="alert alert-danger alert-dismissible fade show" role="alert"><i class="bx bx-error-circle me-2"></i>Network error. Please check your connection and try again.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+              messageDiv.style.display = 'block';
+          })
+          .finally(() => {
+              // Reset button state
+              btnText.classList.remove('d-none');
+              btnLoading.classList.add('d-none');
+              submitBtn.disabled = false;
+          });
+      });
+    </script>
   </body>
 </html>
