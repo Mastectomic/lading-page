@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pl" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <title>MasteCare - Media</title>
+
+    <meta name="description" content="MasteCare w mediach — artykuły i publikacje o aplikacji wspierającej rehabilitację po mastektomii.">
+    <meta name="keywords" content="mastektomia, MasteCare, media, artykuły, prasa, publikacje">
+    <meta name="author" content="MasteCare">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="assets/js/theme-switcher.js"></script>
+    <script>
+      (function() {
+        const savedLang = localStorage.getItem('mastecare_lang');
+        const currentPath = window.location.pathname;
+        if (savedLang === 'en' && !currentPath.includes('/en/')) {
+          window.location.href = '/en/media.html';
+        } else if (savedLang === 'pl' && currentPath.includes('/en/')) {
+          window.location.href = '/media.html';
+        }
+        window.addEventListener('DOMContentLoaded', function() {
+          document.querySelectorAll('[data-lang]').forEach(function(link) {
+            link.addEventListener('click', function() {
+              localStorage.setItem('mastecare_lang', this.getAttribute('data-lang'));
+            });
+          });
+        });
+      })();
+    </script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#6366f1">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css">
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+
+    <style>
+      .page-loading {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      [data-bs-theme="dark"] .page-loading { background-color: #0b0f19; }
+      .page-loading.active { opacity: 1; visibility: visible; }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        transform: translateY(-50%);
+        opacity: 0;
+        transition: opacity .2s ease-in-out;
+      }
+      .page-loading.active > .page-loading-inner { opacity: 1; }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        border: .15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        animation: spinner .75s linear infinite;
+      }
+      @keyframes spinner { 100% { transform: rotate(360deg); } }
+      .nav-link { position: relative; transition: color 0.3s ease; }
+      .nav-link:hover { color: #6366f1 !important; }
+      .nav-link.active { color: #cf4491 !important; font-weight: 600; }
+      .media-articles-section {
+        padding-top: 3.5rem;
+      }
+      @media (min-width: 768px) {
+        .media-articles-section { padding-top: 4.5rem; }
+      }
+      @media (min-width: 992px) {
+        .media-articles-section { padding-top: 5.5rem; }
+      }
+    </style>
+
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () { preloader.remove(); }, 1000);
+        };
+      })();
+    </script>
+  </head>
+
+  <body id="top">
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Ładowanie...</span>
+      </div>
+    </div>
+
+    <main class="page-wrapper">
+      <header class="header navbar navbar-expand-lg position-absolute navbar-sticky">
+        <div class="container px-3">
+          <a href="index.html" class="navbar-brand pe-3">
+            <img src="assets/img/logo.svg" width="47" alt="MasteCare">
+            <span style="color: #3c3c3b;">MasteCare</span>
+          </a>
+          <div id="navbarNav" class="offcanvas offcanvas-end">
+            <div class="offcanvas-header border-bottom">
+              <h5 class="offcanvas-title">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a href="index.html" class="nav-link">Strona Główna</a>
+                </li>
+                <li class="nav-item">
+                  <a href="index.html#about" class="nav-link">O nas</a>
+                </li>
+                <li class="nav-item">
+                  <a href="index.html#features" class="nav-link">Funkcje</a>
+                </li>
+                <li class="nav-item">
+                  <a href="index.html#how-it-works" class="nav-link">Jak to działa</a>
+                </li>
+                <li class="nav-item">
+                  <a href="index.html#testimonials" class="nav-link">Opinie</a>
+                </li>
+                <li class="nav-item">
+                  <a href="index.html#faq" class="nav-link">FAQ</a>
+                </li>
+                <li class="nav-item">
+                  <a href="media.html" class="nav-link active" aria-current="page">Media</a>
+                </li>
+              </ul>
+              <hr class="my-3 d-lg-none">
+              <div class="d-lg-none">
+                <h6 class="mb-2">Język / Language</h6>
+                <a href="media.html" class="btn btn-outline-secondary btn-sm me-2 mb-2 active" data-lang="pl">Polski</a>
+                <a href="en/media.html" class="btn btn-outline-secondary btn-sm mb-2" data-lang="en">English</a>
+              </div>
+            </div>
+            <div class="offcanvas-header border-top">
+              <a href="https://app.mastecare.com/" class="btn btn-primary w-100" target="_blank" rel="noopener">
+                <i class="bx bx-right-arrow-alt fs-4 lh-1 me-1"></i>
+                &nbsp;Przejdź do aplikacji
+              </a>
+            </div>
+          </div>
+          <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="dropdown d-none d-lg-block me-3">
+            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bx bx-globe fs-5 me-1"></i> PL
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+              <li><a class="dropdown-item active" href="media.html" data-lang="pl">Polski</a></li>
+              <li><a class="dropdown-item" href="en/media.html" data-lang="en">English</a></li>
+            </ul>
+          </div>
+          <a href="https://app.mastecare.com/" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex" target="_blank" rel="noopener">
+            <i class="bx bx-right-arrow-alt fs-5 lh-1 me-1"></i>
+            &nbsp;Przejdź do aplikacji
+          </a>
+        </div>
+      </header>
+
+      <section class="overflow-hidden pt-5" style="background: radial-gradient(116.18% 118% at 50% 100%, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 41.83%, rgba(241, 244, 253, 0.07) 82.52%);">
+        <div class="container pt-5 mt-5 pb-5">
+          <div class="row justify-content-center text-center pt-md-3 pb-3">
+            <div class="col-lg-8">
+              <h1 class="display-6 fw-light mb-3" style="color: #444;">
+                MasteCare <span class="fw-semibold" style="color:#cf4491">w mediach</span>
+              </h1>
+              <p class="fs-lg text-muted mb-0">
+                Artykuły, wywiady i publikacje o MasteCare w prasie i internecie.
+                Każdy wpis prowadzi do zewnętrznego artykułu.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container media-articles-section pb-5 mb-lg-4">
+        <!--
+          Dodawanie wpisów: edytuj plik assets/data/media-posts.json
+          W sekcji "pl" dodaj obiekt z polami: title, excerpt, url, source, date (YYYY-MM-DD),
+          image (ścieżka np. assets/img/media/nazwa.jpg), imageAlt (opcjonalnie).
+        -->
+        <div id="media-posts-empty" class="alert alert-info d-none text-center" role="status"></div>
+        <div id="media-posts-list" class="row g-4" data-media-src="assets/data/media-posts.json" data-assets-base="assets/"></div>
+      </section>
+    </main>
+
+    <footer class="footer pt-5 pb-4 pb-lg-5">
+      <div class="container text-center pt-lg-3">
+        <div class="navbar-brand justify-content-center text-dark mb-2 mb-lg-4">
+          <img src="assets/img/logo.svg" class="me-2" width="60" alt="MasteCare">
+          <span class="fs-4">MasteCare</span>
+        </div>
+        <ul class="nav justify-content-center pt-3 pb-4 pb-lg-5">
+          <li class="nav-item"><a href="index.html" class="nav-link">Strona Główna</a></li>
+          <li class="nav-item"><a href="index.html#features" class="nav-link">Funkcje</a></li>
+          <li class="nav-item"><a href="index.html#about" class="nav-link">O projekcie</a></li>
+          <li class="nav-item"><a href="media.html" class="nav-link">Media</a></li>
+          <li class="nav-item"><a href="index.html#faq" class="nav-link">FAQ</a></li>
+        </ul>
+        <div class="d-flex flex-column flex-sm-row justify-content-center">
+          <a href="https://app.mastecare.com/" class="btn btn-primary btn-lg px-4 py-3 mb-3" target="_blank" rel="noopener">
+            <i class="bx bx-right-arrow-alt fs-4 lh-1 me-2"></i>
+            Przejdź do aplikacji
+          </a>
+        </div>
+        <p class="nav d-block fs-sm text-center pt-5 mt-lg-4 mb-0">
+          <span class="opacity-80">&copy; All rights reserved. </span>
+          <a class="nav-link d-inline-block p-0" href="https://mastecare.com/" target="_blank" rel="noopener">MasteCare</a>
+        </p>
+      </div>
+    </footer>
+
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+    <script src="assets/js/theme.min.js"></script>
+    <script src="assets/js/media.js"></script>
+  </body>
+</html>
